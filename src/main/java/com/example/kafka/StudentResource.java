@@ -36,7 +36,7 @@ public class StudentResource {
 	@PostConstruct
 	public void intializeConfig() {
 		props = new HashMap<>();
-		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
+		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "my-cluster-kafka-bootstrap:9092");
 // config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
 		props.put(ConsumerConfig.GROUP_ID_CONFIG, "kafka");
 		props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
@@ -46,7 +46,7 @@ public class StudentResource {
 
 	@Autowired
 	private KafkaTemplate<String, Student> kafkaTemplate;
-	private static final String TOPIC = "Kafka_Example";
+	private static final String TOPIC = "kafkaexample";
 
 	@GET
 	@Path("/{stdid}")
@@ -75,9 +75,9 @@ public class StudentResource {
 
 		KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
 		List<String> topics = new ArrayList<>();
-		topics.add("Kafka_Example");
+		topics.add("kafkaexample");
 		consumer.subscribe(topics);
-		System.out.println("KafkaExample");
+		System.out.println("kafkaexample");
 		ConsumerRecords<String, String> cRecords = consumer.poll(Duration.of(10, ChronoUnit.SECONDS));
 		List<Student> studentList = new ArrayList<>();
 		ObjectMapper om = new ObjectMapper();
