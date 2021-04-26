@@ -1,0 +1,2847 @@
+Microsoft Windows [Version 10.0.19042.928]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\manis>kubectl
+kubectl controls the Kubernetes cluster manager.
+
+ Find more information at: https://kubernetes.io/docs/reference/kubectl/overview/
+
+Basic Commands (Beginner):
+  create        Create a resource from a file or from stdin.
+  expose        Take a replication controller, service, deployment or pod and expose it as a new
+Kubernetes Service
+  run           Run a particular image on the cluster
+  set           Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain       Documentation of resources
+  get           Display one or many resources
+  edit          Edit a resource on the server
+  delete        Delete resources by filenames, stdin, resources and names, or by resources and label
+selector
+
+Deploy Commands:
+  rollout       Manage the rollout of a resource
+  scale         Set a new size for a Deployment, ReplicaSet or Replication Controller
+  autoscale     Auto-scale a Deployment, ReplicaSet, or ReplicationController
+
+Cluster Management Commands:
+  certificate   Modify certificate resources.
+  cluster-info  Display cluster info
+  top           Display Resource (CPU/Memory/Storage) usage.
+  cordon        Mark node as unschedulable
+  uncordon      Mark node as schedulable
+  drain         Drain node in preparation for maintenance
+  taint         Update the taints on one or more nodes
+
+Troubleshooting and Debugging Commands:
+  describe      Show details of a specific resource or group of resources
+  logs          Print the logs for a container in a pod
+  attach        Attach to a running container
+  exec          Execute a command in a container
+  port-forward  Forward one or more local ports to a pod
+  proxy         Run a proxy to the Kubernetes API server
+  cp            Copy files and directories to and from containers.
+  auth          Inspect authorization
+
+Advanced Commands:
+  diff          Diff live version against would-be applied version
+  apply         Apply a configuration to a resource by filename or stdin
+  patch         Update field(s) of a resource using strategic merge patch
+  replace       Replace a resource by filename or stdin
+  wait          Experimental: Wait for a specific condition on one or many resources.
+  convert       Convert config files between different API versions
+  kustomize     Build a kustomization target from a directory or a remote url.
+
+Settings Commands:
+  label         Update the labels on a resource
+  annotate      Update the annotations on a resource
+  completion    Output shell completion code for the specified shell (bash or zsh)
+
+Other Commands:
+  alpha         Commands for features in alpha
+  api-resources Print the supported API resources on the server
+  api-versions  Print the supported API versions on the server, in the form of "group/version"
+  config        Modify kubeconfig files
+  plugin        Provides utilities for interacting with plugins.
+  version       Print the client and server version information
+
+Usage:
+  kubectl [flags] [options]
+
+Use "kubectl <command> --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+C:\Users\manis>
+C:\Users\manis>kubectl upgrade
+Error: unknown command "upgrade" for "kubectl"
+Run 'kubectl --help' for usage.
+
+C:\Users\manis>kubectl update
+Error: unknown command "update" for "kubectl"
+Run 'kubectl --help' for usage.
+
+C:\Users\manis>gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project nth-skyline-306500
+Fetching cluster endpoint and auth data.
+WARNING: cluster cluster-1 is not running. The kubernetes API may not be available.
+kubeconfig entry generated for cluster-1.
+
+C:\Users\manis>kubectl apply -f https://strimzi.io/install/latest?namespace=default
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-entity-operator-delegation created
+clusterrolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator created
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-topic-operator-delegation created
+customresourcedefinition.apiextensions.k8s.io/kafkausers.kafka.strimzi.io created
+customresourcedefinition.apiextensions.k8s.io/kafkarebalances.kafka.strimzi.io created
+deployment.apps/strimzi-cluster-operator created
+customresourcedefinition.apiextensions.k8s.io/kafkamirrormaker2s.kafka.strimzi.io created
+clusterrole.rbac.authorization.k8s.io/strimzi-entity-operator created
+clusterrole.rbac.authorization.k8s.io/strimzi-cluster-operator-global created
+clusterrolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-kafka-broker-delegation created
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator created
+clusterrole.rbac.authorization.k8s.io/strimzi-cluster-operator-namespaced created
+clusterrole.rbac.authorization.k8s.io/strimzi-topic-operator created
+clusterrolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-kafka-client-delegation created
+clusterrole.rbac.authorization.k8s.io/strimzi-kafka-client created
+serviceaccount/strimzi-cluster-operator created
+clusterrole.rbac.authorization.k8s.io/strimzi-kafka-broker created
+customresourcedefinition.apiextensions.k8s.io/kafkatopics.kafka.strimzi.io created
+customresourcedefinition.apiextensions.k8s.io/kafkabridges.kafka.strimzi.io created
+customresourcedefinition.apiextensions.k8s.io/kafkaconnectors.kafka.strimzi.io created
+customresourcedefinition.apiextensions.k8s.io/kafkaconnects2is.kafka.strimzi.io created
+customresourcedefinition.apiextensions.k8s.io/kafkaconnects.kafka.strimzi.io created
+customresourcedefinition.apiextensions.k8s.io/kafkamirrormakers.kafka.strimzi.io created
+configmap/strimzi-cluster-operator created
+The CustomResourceDefinition "kafkas.kafka.strimzi.io" is invalid: metadata.annotations: Too long: must have at most 262144 bytes
+
+C:\Users\manis>vim
+'vim' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\manis>notepad file1
+
+C:\Users\manis>kubectl apply -f file1.txt
+error: unable to recognize "file1.txt": no matches for kind "Kafka" in version "kafka.strimzi.io/v1beta1"
+
+C:\Users\manis>wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+
+C:\Users\manis>wget https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz
+--2021-04-25 19:16:51--  https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz
+Resolving github.com... 192.30.255.112
+Connecting to github.com|192.30.255.112|:443... connected.
+ERROR: cannot verify github.com's certificate, issued by '/C=US/O=DigiCert, Inc./CN=DigiCert High Assurance TLS Hybrid ECC SHA256 2020 CA1':
+  Unable to locally verify the issuer's authority.
+To connect to github.com insecurely, use `--no-check-certificate'.
+
+C:\Users\manis>wget http://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz
+--2021-04-25 19:17:01--  http://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz
+Resolving github.com... 192.30.255.112
+Connecting to github.com|192.30.255.112|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz [following]
+--2021-04-25 19:17:01--  https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz
+Connecting to github.com|192.30.255.112|:443... connected.
+ERROR: cannot verify github.com's certificate, issued by '/C=US/O=DigiCert, Inc./CN=DigiCert High Assurance TLS Hybrid ECC SHA256 2020 CA1':
+  Unable to locally verify the issuer's authority.
+To connect to github.com insecurely, use `--no-check-certificate'.
+
+C:\Users\manis>wget --no-check-certificate https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz
+--2021-04-25 19:17:16--  https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.22.1/strimzi-0.22.1.tar.gz
+Resolving github.com... 192.30.255.112
+Connecting to github.com|192.30.255.112|:443... connected.
+WARNING: cannot verify github.com's certificate, issued by '/C=US/O=DigiCert, Inc./CN=DigiCert High Assurance TLS Hybrid ECC SHA256 2020 CA1':
+  Unable to locally verify the issuer's authority.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/58194180/ed36bf80-8b1e-11eb-97c6-6ce9408d4668?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210426%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210426T021716Z&X-Amz-Expires=300&X-Amz-Signature=1a9ff256071808b6520f9baf4622c38aa65c5162113efb504e5352ca3dbda698&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=58194180&response-content-disposition=attachment%3B%20filename%3Dstrimzi-0.22.1.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-04-25 19:17:16--  https://github-releases.githubusercontent.com/58194180/ed36bf80-8b1e-11eb-97c6-6ce9408d4668?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210426%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210426T021716Z&X-Amz-Expires=300&X-Amz-Signature=1a9ff256071808b6520f9baf4622c38aa65c5162113efb504e5352ca3dbda698&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=58194180&response-content-disposition=attachment%3B%20filename%3Dstrimzi-0.22.1.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com... 185.199.111.154, 185.199.110.154, 185.199.108.154, ...
+Connecting to github-releases.githubusercontent.com|185.199.111.154|:443... connected.
+WARNING: cannot verify github-releases.githubusercontent.com's certificate, issued by '/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert SHA2 High Assurance Server CA':
+  Unable to locally verify the issuer's authority.
+HTTP request sent, awaiting response... 200 OK
+Length: 6064870 (5.8M) [application/octet-stream]
+Saving to: 'strimzi-0.22.1.tar.gz'
+
+100%[============================================================================>] 6,064,870   --.-K/s   in 0.1s
+
+2021-04-25 19:17:17 (42.9 MB/s) - 'strimzi-0.22.1.tar.gz' saved [6064870/6064870]
+
+
+C:\Users\manis>tar
+tar: Must specify one of -c, -r, -t, -u, -x
+
+C:\Users\manis>tar -zxvf strimzi-0.22.1.tar.gz
+x strimzi-0.22.1/
+x strimzi-0.22.1/install/
+x strimzi-0.22.1/docs/
+x strimzi-0.22.1/examples/
+x strimzi-0.22.1/examples/metrics/
+x strimzi-0.22.1/examples/security/
+x strimzi-0.22.1/examples/bridge/
+x strimzi-0.22.1/examples/mirror-maker/
+x strimzi-0.22.1/examples/user/
+x strimzi-0.22.1/examples/topic/
+x strimzi-0.22.1/examples/README.md
+x strimzi-0.22.1/examples/kafka/
+x strimzi-0.22.1/examples/templates/
+x strimzi-0.22.1/examples/connect/
+x strimzi-0.22.1/examples/cruise-control/
+x strimzi-0.22.1/examples/cruise-control/kafka-rebalance.yaml
+x strimzi-0.22.1/examples/cruise-control/kafka-rebalance-with-goals.yaml
+x strimzi-0.22.1/examples/cruise-control/kafka-cruise-control.yaml
+x strimzi-0.22.1/examples/connect/kafka-connect-s2i.yaml
+x strimzi-0.22.1/examples/connect/source-connector.yaml
+x strimzi-0.22.1/examples/connect/kafka-connect.yaml
+x strimzi-0.22.1/examples/connect/kafka-connect-s2i-single-node-kafka.yaml
+x strimzi-0.22.1/examples/connect/kafka-connect-single-node-kafka.yaml
+x strimzi-0.22.1/examples/templates/topic-operator/
+x strimzi-0.22.1/examples/templates/cluster-operator/
+x strimzi-0.22.1/examples/templates/cluster-operator/ephemeral-template.yaml
+x strimzi-0.22.1/examples/templates/cluster-operator/mirror-maker-template.yaml
+x strimzi-0.22.1/examples/templates/cluster-operator/connect-s2i-template.yaml
+x strimzi-0.22.1/examples/templates/cluster-operator/persistent-template.yaml
+x strimzi-0.22.1/examples/templates/cluster-operator/connect-template.yaml
+x strimzi-0.22.1/examples/templates/topic-operator/topic-template.yaml
+x strimzi-0.22.1/examples/kafka/kafka-ephemeral-single.yaml
+x strimzi-0.22.1/examples/kafka/kafka-ephemeral.yaml
+x strimzi-0.22.1/examples/kafka/kafka-jbod.yaml
+x strimzi-0.22.1/examples/kafka/kafka-persistent-single.yaml
+x strimzi-0.22.1/examples/kafka/kafka-persistent.yaml
+x strimzi-0.22.1/examples/topic/kafka-topic.yaml
+x strimzi-0.22.1/examples/user/kafka-user.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-mirror-maker-tls.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-mirror-maker.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-mirror-maker-2-custom-replication-policy.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-mirror-maker-2.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-target.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-source.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-mirror-maker-2-sync-groups.yaml
+x strimzi-0.22.1/examples/mirror-maker/kafka-mirror-maker-2-tls.yaml
+x strimzi-0.22.1/examples/bridge/kafka-bridge.yaml
+x strimzi-0.22.1/examples/security/scram-sha-512-auth/
+x strimzi-0.22.1/examples/security/tls-auth/
+x strimzi-0.22.1/examples/security/tls-auth/bridge.yaml
+x strimzi-0.22.1/examples/security/tls-auth/kafka.yaml
+x strimzi-0.22.1/examples/security/tls-auth/connect.yaml
+x strimzi-0.22.1/examples/security/tls-auth/topic.yaml
+x strimzi-0.22.1/examples/security/tls-auth/user.yaml
+x strimzi-0.22.1/examples/security/scram-sha-512-auth/bridge.yaml
+x strimzi-0.22.1/examples/security/scram-sha-512-auth/kafka.yaml
+x strimzi-0.22.1/examples/security/scram-sha-512-auth/connect.yaml
+x strimzi-0.22.1/examples/security/scram-sha-512-auth/topic.yaml
+x strimzi-0.22.1/examples/security/scram-sha-512-auth/user.yaml
+x strimzi-0.22.1/examples/metrics/kafka-mirror-maker-2-metrics.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-additional-properties/
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/
+x strimzi-0.22.1/examples/metrics/jmxtrans/
+x strimzi-0.22.1/examples/metrics/kafka-connect-metrics.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-alertmanager-config/
+x strimzi-0.22.1/examples/metrics/grafana-install/
+x strimzi-0.22.1/examples/metrics/kafka-bridge-metrics.yaml
+x strimzi-0.22.1/examples/metrics/kafka-metrics.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-install/
+x strimzi-0.22.1/examples/metrics/kafka-cruise-control-metrics.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-install/alert-manager.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-install/strimzi-pod-monitor.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-install/prometheus.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-install/prometheus-rules.yaml
+x strimzi-0.22.1/examples/metrics/grafana-install/grafana.yaml
+x strimzi-0.22.1/examples/metrics/prometheus-alertmanager-config/alert-manager-config.yaml
+x strimzi-0.22.1/examples/metrics/jmxtrans/jmxtrans.yaml
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-zookeeper.json
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-kafka-mirror-maker-2.json
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-operators.json
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-cruise-control.json
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-kafka.json
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-kafka-connect.json
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-kafka-bridge.json
+x strimzi-0.22.1/examples/metrics/grafana-dashboards/strimzi-kafka-exporter.json
+x strimzi-0.22.1/examples/metrics/prometheus-additional-properties/prometheus-additional.yaml
+x strimzi-0.22.1/docs/pdf/
+x strimzi-0.22.1/docs/html/
+x strimzi-0.22.1/docs/html/quickstart.html
+x strimzi-0.22.1/docs/html/images/
+x strimzi-0.22.1/docs/html/overview.html
+x strimzi-0.22.1/docs/html/deploying.html
+x strimzi-0.22.1/docs/html/using.html
+x strimzi-0.22.1/docs/html/images/kafka-authorization-config-options.svg
+x strimzi-0.22.1/docs/html/images/oauth-introspection-endpoint.png
+x strimzi-0.22.1/docs/html/images/listener-config-options.svg
+x strimzi-0.22.1/docs/html/images/rack-config-availability-zones.svg
+x strimzi-0.22.1/docs/html/images/grafana_prometheus_data_source.png
+x strimzi-0.22.1/docs/html/images/cluster-operator.png
+x strimzi-0.22.1/docs/html/images/secure_communication.png
+x strimzi-0.22.1/docs/html/images/oauth-jwt-signature-token.png
+x strimzi-0.22.1/docs/html/images/mirrormaker.png
+x strimzi-0.22.1/docs/html/images/kafka-bridge.png
+x strimzi-0.22.1/docs/html/images/oauth-jwt-signature.png
+x strimzi-0.22.1/docs/html/images/consumer-lag.png
+x strimzi-0.22.1/docs/html/images/topic-operator.png
+x strimzi-0.22.1/docs/html/images/operators.png
+x strimzi-0.22.1/docs/html/images/mirrormaker-renaming.png
+x strimzi-0.22.1/docs/html/images/oauth-introspection-endpoint-long-token.png
+x strimzi-0.22.1/docs/html/images/grafana_kafka_dashboard.png
+x strimzi-0.22.1/docs/html/images/overview/
+x strimzi-0.22.1/docs/html/images/image_con-overview-distributed-tracing.png
+x strimzi-0.22.1/docs/html/images/grafana-dashboard-selection.png
+x strimzi-0.22.1/docs/html/images/overview/kafka-concepts-producer-consumer.png
+x strimzi-0.22.1/docs/html/images/overview/kafka-concepts-key-concepts.png
+x strimzi-0.22.1/docs/html/images/overview/kafka-concepts-supporting-components.png
+x strimzi-0.22.1/docs/html/images/overview/kafka-concepts-partitions.png
+x strimzi-0.22.1/docs/pdf/deploying.pdf
+x strimzi-0.22.1/docs/pdf/overview.pdf
+x strimzi-0.22.1/docs/pdf/quickstart.pdf
+x strimzi-0.22.1/docs/pdf/using.pdf
+x strimzi-0.22.1/install/topic-operator/
+x strimzi-0.22.1/install/cluster-operator/
+x strimzi-0.22.1/install/strimzi-admin/
+x strimzi-0.22.1/install/user-operator/
+x strimzi-0.22.1/install/user-operator/01-ServiceAccount-strimzi-user-operator.yaml
+x strimzi-0.22.1/install/user-operator/04-Crd-kafkauser.yaml
+x strimzi-0.22.1/install/user-operator/02-Role-strimzi-user-operator.yaml
+x strimzi-0.22.1/install/user-operator/05-Deployment-strimzi-user-operator.yaml
+x strimzi-0.22.1/install/user-operator/03-RoleBinding-strimzi-user-operator.yaml
+x strimzi-0.22.1/install/strimzi-admin/020-ClusterRole-strimzi-view.yaml
+x strimzi-0.22.1/install/strimzi-admin/010-ClusterRole-strimzi-admin.yaml
+x strimzi-0.22.1/install/cluster-operator/040-Crd-kafka.yaml
+x strimzi-0.22.1/install/cluster-operator/031-RoleBinding-strimzi-cluster-operator-entity-operator-delegation.yaml
+x strimzi-0.22.1/install/cluster-operator/021-ClusterRoleBinding-strimzi-cluster-operator.yaml
+x strimzi-0.22.1/install/cluster-operator/032-RoleBinding-strimzi-cluster-operator-topic-operator-delegation.yaml
+x strimzi-0.22.1/install/cluster-operator/044-Crd-kafkauser.yaml
+x strimzi-0.22.1/install/cluster-operator/049-Crd-kafkarebalance.yaml
+x strimzi-0.22.1/install/cluster-operator/060-Deployment-strimzi-cluster-operator.yaml
+x strimzi-0.22.1/install/cluster-operator/048-Crd-kafkamirrormaker2.yaml
+x strimzi-0.22.1/install/cluster-operator/031-ClusterRole-strimzi-entity-operator.yaml
+x strimzi-0.22.1/install/cluster-operator/021-ClusterRole-strimzi-cluster-operator-role.yaml
+x strimzi-0.22.1/install/cluster-operator/030-ClusterRoleBinding-strimzi-cluster-operator-kafka-broker-delegation.yaml
+x strimzi-0.22.1/install/cluster-operator/020-RoleBinding-strimzi-cluster-operator.yaml
+x strimzi-0.22.1/install/cluster-operator/020-ClusterRole-strimzi-cluster-operator-role.yaml
+x strimzi-0.22.1/install/cluster-operator/032-ClusterRole-strimzi-topic-operator.yaml
+x strimzi-0.22.1/install/cluster-operator/033-ClusterRoleBinding-strimzi-cluster-operator-kafka-client-delegation.yaml
+x strimzi-0.22.1/install/cluster-operator/033-ClusterRole-strimzi-kafka-client.yaml
+x strimzi-0.22.1/install/cluster-operator/010-ServiceAccount-strimzi-cluster-operator.yaml
+x strimzi-0.22.1/install/cluster-operator/030-ClusterRole-strimzi-kafka-broker.yaml
+x strimzi-0.22.1/install/cluster-operator/043-Crd-kafkatopic.yaml
+x strimzi-0.22.1/install/cluster-operator/046-Crd-kafkabridge.yaml
+x strimzi-0.22.1/install/cluster-operator/047-Crd-kafkaconnector.yaml
+x strimzi-0.22.1/install/cluster-operator/042-Crd-kafkaconnects2i.yaml
+x strimzi-0.22.1/install/cluster-operator/041-Crd-kafkaconnect.yaml
+x strimzi-0.22.1/install/cluster-operator/045-Crd-kafkamirrormaker.yaml
+x strimzi-0.22.1/install/cluster-operator/050-ConfigMap-strimzi-cluster-operator.yaml
+x strimzi-0.22.1/install/topic-operator/01-ServiceAccount-strimzi-topic-operator.yaml
+x strimzi-0.22.1/install/topic-operator/04-Crd-kafkatopic.yaml
+x strimzi-0.22.1/install/topic-operator/03-RoleBinding-strimzi-topic-operator.yaml
+x strimzi-0.22.1/install/topic-operator/05-Deployment-strimzi-topic-operator.yaml
+x strimzi-0.22.1/install/topic-operator/02-Role-strimzi-topic-operator.yaml
+
+C:\Users\manis>vim strimzi-0.22.1/
+
+C:\Users\manis>notepad file1.txt
+
+C:\Users\manis>kubectl apply -f file1.txt
+error: unable to recognize "file1.txt": no matches for kind "Kafka" in version "kafka.strimzi.io/v1beta2"
+
+C:\Users\manis>kubectl ns
+Error: unknown command "ns" for "kubectl"
+
+Did you mean this?
+        cp
+
+Run 'kubectl --help' for usage.
+
+C:\Users\manis>kubectl namespace
+Error: unknown command "namespace" for "kubectl"
+Run 'kubectl --help' for usage.
+
+C:\Users\manis>kubectl get ns
+NAME              STATUS   AGE
+default           Active   12m
+kube-node-lease   Active   12m
+kube-public       Active   12m
+kube-system       Active   12m
+
+C:\Users\manis>kubectl create ns myprojectkube
+
+C:\Users\manis>kubectl create ns kafka
+namespace/kafka created
+
+C:\Users\manis>kubectl create -f 'https://strimzi.io/install/latest?namespace=kafka' -n kafka
+error: the path "'https://strimzi.io/install/latest?namespace=kafka'" cannot be accessed: CreateFile 'https://strimzi.io/install/latest?namespace=kafka': The filename, directory name, or volume label syntax is incorrect.
+
+C:\Users\manis>kubectl create -f https://strimzi.io/install/latest?namespace=kafka -n kafka
+customresourcedefinition.apiextensions.k8s.io/kafkas.kafka.strimzi.io created
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-entity-operator-delegation created
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator-topic-operator-delegation created
+deployment.apps/strimzi-cluster-operator created
+rolebinding.rbac.authorization.k8s.io/strimzi-cluster-operator created
+serviceaccount/strimzi-cluster-operator created
+configmap/strimzi-cluster-operator created
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterrolebindings.rbac.authorization.k8s.io "strimzi-cluster-operator" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkausers.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkarebalances.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkamirrormaker2s.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterroles.rbac.authorization.k8s.io "strimzi-entity-operator" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterroles.rbac.authorization.k8s.io "strimzi-cluster-operator-global" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterrolebindings.rbac.authorization.k8s.io "strimzi-cluster-operator-kafka-broker-delegation" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterroles.rbac.authorization.k8s.io "strimzi-cluster-operator-namespaced" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterroles.rbac.authorization.k8s.io "strimzi-topic-operator" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterrolebindings.rbac.authorization.k8s.io "strimzi-cluster-operator-kafka-client-delegation" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterroles.rbac.authorization.k8s.io "strimzi-kafka-client" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": clusterroles.rbac.authorization.k8s.io "strimzi-kafka-broker" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkatopics.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkabridges.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkaconnectors.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkaconnects2is.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkaconnects.kafka.strimzi.io" already exists
+Error from server (AlreadyExists): error when creating "https://strimzi.io/install/latest?namespace=kafka": customresourcedefinitions.apiextensions.k8s.io "kafkamirrormakers.kafka.strimzi.io" already exists
+
+C:\Users\manis>kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+kafka.kafka.strimzi.io/my-cluster created
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          12s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          46s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          16s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          50s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          28s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          62s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          31s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          65s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          39s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          73s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-kafka-0                          0/1     ContainerCreating   0          29s
+my-cluster-zookeeper-0                      1/1     Running             0          73s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          107s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-g7f5q   2/3     Running   0          30s
+my-cluster-kafka-0                           1/1     Running   0          96s
+my-cluster-zookeeper-0                       1/1     Running   0          2m20s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          2m54s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-g7f5q   3/3     Running   0          2m50s
+my-cluster-kafka-0                           1/1     Running   0          3m56s
+my-cluster-zookeeper-0                       1/1     Running   0          4m40s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          5m14s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-g7f5q   3/3     Running   0          2m52s
+my-cluster-kafka-0                           1/1     Running   0          3m58s
+my-cluster-zookeeper-0                       1/1     Running   0          4m42s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          5m16s
+
+C:\Users\manis>kubectl destroy -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+Error: unknown command "destroy" for "kubectl"
+Run 'kubectl --help' for usage.
+
+C:\Users\manis>kubectl delete -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+kafka.kafka.strimzi.io "my-cluster" deleted
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS        RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-g7f5q   0/3     Terminating   0          10m
+my-cluster-kafka-0                           1/1     Terminating   0          11m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running       0          12m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS        RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-g7f5q   0/3     Terminating   0          10m
+my-cluster-kafka-0                           1/1     Terminating   0          11m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running       0          12m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS        RESTARTS   AGE
+my-cluster-kafka-0                          0/1     Terminating   0          12m
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running       0          13m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          13m
+
+C:\Users\manis>kubectl
+kubectl controls the Kubernetes cluster manager.
+
+ Find more information at: https://kubernetes.io/docs/reference/kubectl/overview/
+
+Basic Commands (Beginner):
+  create        Create a resource from a file or from stdin.
+  expose        Take a replication controller, service, deployment or pod and expose it as a new
+Kubernetes Service
+  run           Run a particular image on the cluster
+  set           Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain       Documentation of resources
+  get           Display one or many resources
+  edit          Edit a resource on the server
+  delete        Delete resources by filenames, stdin, resources and names, or by resources and label
+selector
+
+Deploy Commands:
+  rollout       Manage the rollout of a resource
+  scale         Set a new size for a Deployment, ReplicaSet or Replication Controller
+  autoscale     Auto-scale a Deployment, ReplicaSet, or ReplicationController
+
+Cluster Management Commands:
+  certificate   Modify certificate resources.
+  cluster-info  Display cluster info
+  top           Display Resource (CPU/Memory/Storage) usage.
+  cordon        Mark node as unschedulable
+  uncordon      Mark node as schedulable
+  drain         Drain node in preparation for maintenance
+  taint         Update the taints on one or more nodes
+
+Troubleshooting and Debugging Commands:
+  describe      Show details of a specific resource or group of resources
+  logs          Print the logs for a container in a pod
+  attach        Attach to a running container
+  exec          Execute a command in a container
+  port-forward  Forward one or more local ports to a pod
+  proxy         Run a proxy to the Kubernetes API server
+  cp            Copy files and directories to and from containers.
+  auth          Inspect authorization
+
+Advanced Commands:
+  diff          Diff live version against would-be applied version
+  apply         Apply a configuration to a resource by filename or stdin
+  patch         Update field(s) of a resource using strategic merge patch
+  replace       Replace a resource by filename or stdin
+  wait          Experimental: Wait for a specific condition on one or many resources.
+  convert       Convert config files between different API versions
+  kustomize     Build a kustomization target from a directory or a remote url.
+
+Settings Commands:
+  label         Update the labels on a resource
+  annotate      Update the annotations on a resource
+  completion    Output shell completion code for the specified shell (bash or zsh)
+
+Other Commands:
+  alpha         Commands for features in alpha
+  api-resources Print the supported API resources on the server
+  api-versions  Print the supported API versions on the server, in the form of "group/version"
+  config        Modify kubeconfig files
+  plugin        Provides utilities for interacting with plugins.
+  version       Print the client and server version information
+
+Usage:
+  kubectl [flags] [options]
+
+Use "kubectl <command> --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          13m
+
+C:\Users\manis>kubectl apply -f strimzi-0.22.1/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+error: the path "strimzi-0.22.1/examples/latest/kafka/kafka-persistent-single.yaml" does not exist
+
+C:\Users\manis>kubectl apply -f ./strimzi-0.22.1/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+error: the path "./strimzi-0.22.1/examples/latest/kafka/kafka-persistent-single.yaml" does not exist
+
+C:\Users\manis>kubectl apply -f .\strimzi-0.22.1\examples\latest\kafka\kafka-persistent-single.yaml -n kafka
+error: the path ".\\strimzi-0.22.1\\examples\\latest\\kafka\\kafka-persistent-single.yaml" does not exist
+
+C:\Users\manis>kubectl apply -f ".\strimzi-0.22.1\examples\latest\kafka\kafka-persistent-single.yaml" -n kafka
+error: the path ".\\strimzi-0.22.1\\examples\\latest\\kafka\\kafka-persistent-single.yaml" does not exist
+
+C:\Users\manis>kubectl apply -f "C:\Users\manis\strimzi-0.22.1\examples\kafka\kafka-persistent-single.yaml" -n kafka
+kafka.kafka.strimzi.io/my-cluster created
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          7s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          15m
+
+C:\Users\manis>kubectl wait kafka/my-cluster --for=condition=Ready --timeout=300s -n kafka
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m8s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          17m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m11s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          17m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m12s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          17m
+
+C:\Users\manis>kubectl -n kafka get svc
+NAME                          TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                      AGE
+my-cluster-zookeeper-client   ClusterIP   10.8.0.215   <none>        2181/TCP                     2m26s
+my-cluster-zookeeper-nodes    ClusterIP   None         <none>        2181/TCP,2888/TCP,3888/TCP   2m26s
+
+C:\Users\manis>kubectl -n kafka get svc
+NAME                          TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                      AGE
+my-cluster-zookeeper-client   ClusterIP   10.8.0.215   <none>        2181/TCP                     2m34s
+my-cluster-zookeeper-nodes    ClusterIP   None         <none>        2181/TCP,2888/TCP,3888/TCP   2m34s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m36s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          18m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          3m22s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          18m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          3m24s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          18m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          3m25s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          18m
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          3m28s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          19m
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          3m31s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          19m
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pv
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                               STORAGECLASS   REASON   AGE
+pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            Delete           Bound    kafka/data-0-my-cluster-kafka-0     standard                17m
+pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            Delete           Bound    kafka/data-my-cluster-zookeeper-0   standard                18m
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            standard       17m
+data-my-cluster-zookeeper-0   Bound    pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            standard       18m
+
+C:\Users\manis>kubectl -n kafka get svc
+NAME                          TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                      AGE
+my-cluster-zookeeper-client   ClusterIP   10.8.0.215   <none>        2181/TCP                     3m56s
+my-cluster-zookeeper-nodes    ClusterIP   None         <none>        2181/TCP,2888/TCP,3888/TCP   3m56s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          3m58s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          19m
+
+C:\Users\manis>kubectl delete -f "C:\Users\manis\strimzi-0.22.1\examples\kafka\kafka-persistent-single.yaml" -n kafka
+kafka.kafka.strimzi.io "my-cluster" deleted
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS        RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Terminating   0          4m15s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running       0          19m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS        RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Terminating   0          4m17s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running       0          19m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS        RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Terminating   0          4m18s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running       0          19m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          19m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          19m
+
+C:\Users\manis>kubectl -n kafka get pv
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                               STORAGECLASS   REASON   AGE
+pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            Delete           Bound    kafka/data-0-my-cluster-kafka-0     standard                18m
+pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            Delete           Bound    kafka/data-my-cluster-zookeeper-0   standard                19m
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            standard       18m
+data-my-cluster-zookeeper-0   Bound    pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            standard       19m
+
+C:\Users\manis>kubectl -n kafka delete pod
+error: resource(s) were provided, but no name, label selector, or --all flag specified
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          20m
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            standard       19m
+data-my-cluster-zookeeper-0   Bound    pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            standard       20m
+
+C:\Users\manis>kubectl -n kafka delete pv  data-0-my-cluster-kafka-0  --grace-period=0 --force
+warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Error from server (NotFound): persistentvolumes "data-0-my-cluster-kafka-0" not found
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            standard       20m
+data-my-cluster-zookeeper-0   Bound    pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            standard       20m
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            standard       20m
+data-my-cluster-zookeeper-0   Bound    pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            standard       21m
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            standard       20m
+data-my-cluster-zookeeper-0   Bound    pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            standard       21m
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-be60e1a8-bc04-4eca-b7c9-9b7c403f8ac1   100Gi      RWO            standard       20m
+data-my-cluster-zookeeper-0   Bound    pvc-e074d52f-94f1-4f26-ab59-4f640b7bbb17   100Gi      RWO            standard       21m
+
+C:\Users\manis>kubectl -n kafka delete pvc data-0-my-cluster-kafka-0
+persistentvolumeclaim "data-0-my-cluster-kafka-0" deleted
+
+C:\Users\manis>kubectl -n kafka delete pvc data-my-cluster-zookeeper-0
+persistentvolumeclaim "data-my-cluster-zookeeper-0" deleted
+
+C:\Users\manis>kubectl -n kafka get pvc
+No resources found in kafka namespace.
+
+C:\Users\manis>kubectl -n kafka get pv
+No resources found
+
+C:\Users\manis>kubectl apply -f "C:\Users\manis\strimzi-0.22.1\examples\kafka\kafka-persistent-single.yaml" -n kafka
+kafka.kafka.strimzi.io/my-cluster created
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          4s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          23m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          7s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          23m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          9s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          23m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          21s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          23m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          23s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          23m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          25s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          23m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          62s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          65s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          73s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          75s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          77s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          78s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          80s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          82s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          24m
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m25s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          25m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m27s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          25m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m35s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          25m
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m39s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          25m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m47s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          25m
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m49s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          25m
+
+C:\Users\manis>kubectl delete -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+kafka.kafka.strimzi.io "my-cluster" deleted
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          27m
+
+C:\Users\manis>notepad file1.txt
+
+C:\Users\manis>kubectl -n kafka get pod
+NAME                                        READY   STATUS    RESTARTS   AGE
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          27m
+
+C:\Users\manis>kubectl -n kafka get pv
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                               STORAGECLASS   REASON   AGE
+pvc-3d5730ce-be02-4f12-9083-fa7c247e0ca4   100Gi      RWO            Delete           Bound    kafka/data-0-my-cluster-kafka-0     standard                3m38s
+pvc-c3afb6f6-12d5-41c5-acea-01163d764233   100Gi      RWO            Delete           Bound    kafka/data-my-cluster-zookeeper-0   standard                4m21s
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-3d5730ce-be02-4f12-9083-fa7c247e0ca4   100Gi      RWO            standard       3m42s
+data-my-cluster-zookeeper-0   Bound    pvc-c3afb6f6-12d5-41c5-acea-01163d764233   100Gi      RWO            standard       4m25s
+
+C:\Users\manis>kubectl -n kafka delete pvc data-0-my-cluster-kafka-0
+persistentvolumeclaim "data-0-my-cluster-kafka-0" deleted
+
+C:\Users\manis>kubectl -n kafka delete pvc data-my-cluster-zookeeper-0
+persistentvolumeclaim "data-my-cluster-zookeeper-0" deleted
+
+C:\Users\manis>kubectl -n kafka delete pv
+error: resource(s) were provided, but no name, label selector, or --all flag specified
+
+C:\Users\manis>kubectl delete -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+Error from server (NotFound): error when deleting "https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml": kafkas.kafka.strimzi.io "my-cluster" not found
+
+C:\Users\manis>kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+kafka.kafka.strimzi.io/my-cluster created
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          7s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          28m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          9s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          28m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-zr8p2   3/3     Running   0          72s
+my-cluster-kafka-0                           1/1     Running   0          105s
+my-cluster-zookeeper-0                       1/1     Running   0          2m25s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          31m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-zr8p2   3/3     Running   0          77s
+my-cluster-kafka-0                           1/1     Running   0          110s
+my-cluster-zookeeper-0                       1/1     Running   0          2m30s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          31m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-zr8p2   3/3     Running   0          7m5s
+my-cluster-kafka-0                           1/1     Running   0          7m38s
+my-cluster-zookeeper-0                       1/1     Running   0          8m18s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          37m
+
+C:\Users\manis>kubectl -n kafka get svc
+NAME                          TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+my-cluster-kafka-bootstrap    ClusterIP   10.8.12.143   <none>        9091/TCP,9092/TCP,9093/TCP   9m8s
+my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   9m8s
+my-cluster-zookeeper-client   ClusterIP   10.8.5.230    <none>        2181/TCP                     9m47s
+my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   9m47s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-zr8p2   3/3     Running   0          8m41s
+my-cluster-kafka-0                           1/1     Running   0          9m14s
+my-cluster-zookeeper-0                       1/1     Running   0          9m54s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          38m
+
+C:\Users\manis>kubectl delete -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+kafka.kafka.strimzi.io "my-cluster" deleted
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS        RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-zr8p2   3/3     Terminating   0          9m8s
+my-cluster-kafka-0                           1/1     Terminating   0          9m41s
+my-cluster-zookeeper-0                       1/1     Terminating   0          10m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running       0          39m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS        RESTARTS   AGE
+my-cluster-kafka-0                          0/1     Terminating   0          10m
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running       0          39m
+
+C:\Users\manis>kubectl -n kafka get pv
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                               STORAGECLASS   REASON   AGE
+pvc-0226d0f2-81d4-4103-9f13-3f02dc368df9   100Gi      RWO            Delete           Bound    kafka/data-0-my-cluster-kafka-0     standard                10m
+pvc-db556267-4a65-454c-899a-e5a177f1b9d4   100Gi      RWO            Delete           Bound    kafka/data-my-cluster-zookeeper-0   standard                11m
+
+C:\Users\manis>kubectl -n kafka get pv
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                               STORAGECLASS   REASON   AGE
+pvc-0226d0f2-81d4-4103-9f13-3f02dc368df9   100Gi      RWO            Delete           Bound    kafka/data-0-my-cluster-kafka-0     standard                10m
+pvc-db556267-4a65-454c-899a-e5a177f1b9d4   100Gi      RWO            Delete           Bound    kafka/data-my-cluster-zookeeper-0   standard                11m
+
+C:\Users\manis>kubectl -n kafka get pvc
+NAME                          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-0-my-cluster-kafka-0     Bound    pvc-0226d0f2-81d4-4103-9f13-3f02dc368df9   100Gi      RWO            standard       10m
+data-my-cluster-zookeeper-0   Bound    pvc-db556267-4a65-454c-899a-e5a177f1b9d4   100Gi      RWO            standard       11m
+
+C:\Users\manis>kubectl -n kafka delete pvc  data-0-my-cluster-kafka-0
+persistentvolumeclaim "data-0-my-cluster-kafka-0" deleted
+
+C:\Users\manis>kubectl -n kafka delete pvc  data-my-cluster-zookeeper-0
+persistentvolumeclaim "data-my-cluster-zookeeper-0" deleted
+
+C:\Users\manis>kubectl -n kafka get pvc
+No resources found in kafka namespace.
+
+C:\Users\manis>kubectl -n kafka get pv
+No resources found
+
+C:\Users\manis>kubectl apply -f "C:\Users\manis\strimzi-0.22.1\examples\kafka\kafka-persistent-single.yaml" -n kafka
+kafka.kafka.strimzi.io/my-cluster created
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Pending   0          3s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          40m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          5s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          40m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          7s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          40m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          9s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          40m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          10s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          40m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          11s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          40m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          13s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          15s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          16s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          18s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          19s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          20s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          22s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          23s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          25s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          26s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          27s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          28s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          29s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     Running   0          32s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          34s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          35s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          37s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          38s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          39s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          40s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          41s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          42s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          43s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          44s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          45s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          46s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          47s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          48s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          50s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          51s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          52s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          53s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          54s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          55s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          56s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          57s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          59s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          60s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          61s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          61s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          62s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          63s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          64s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          65s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          65s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          66s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          67s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          67s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          68s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          68s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          69s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          69s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          70s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          70s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          71s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          71s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          41m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          72s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          42m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          73s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          42m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          74s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          42m
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          103s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          42m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          2m55s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          43m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+my-cluster-zookeeper-0                      1/1     Running   0          3m3s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          43m
+
+C:\Users\manis>kubectl -n kafka get svc
+NAME                          TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                      AGE
+my-cluster-zookeeper-client   ClusterIP   10.8.12.45   <none>        2181/TCP                     3m7s
+my-cluster-zookeeper-nodes    ClusterIP   None         <none>        2181/TCP,2888/TCP,3888/TCP   3m7s
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                            READY   STATUS    RESTARTS   AGE
+pod/my-cluster-zookeeper-0                      1/1     Running   0          3m10s
+pod/strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          43m
+
+NAME                                  TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-zookeeper-client   ClusterIP   10.8.12.45   <none>        2181/TCP                     3m10s
+service/my-cluster-zookeeper-nodes    ClusterIP   None         <none>        2181/TCP,2888/TCP,3888/TCP   3m10s
+
+NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/strimzi-cluster-operator   1/1     1            1           44m
+
+NAME                                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/strimzi-cluster-operator-698944bf78   1         1         1       44m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-zookeeper   1/1     3m11s
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                            READY   STATUS    RESTARTS   AGE
+pod/my-cluster-zookeeper-0                      1/1     Running   0          3m39s
+pod/strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running   0          44m
+
+NAME                                  TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-zookeeper-client   ClusterIP   10.8.12.45   <none>        2181/TCP                     3m39s
+service/my-cluster-zookeeper-nodes    ClusterIP   None         <none>        2181/TCP,2888/TCP,3888/TCP   3m39s
+
+NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/strimzi-cluster-operator   1/1     1            1           44m
+
+NAME                                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/strimzi-cluster-operator-698944bf78   1         1         1       44m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-zookeeper   1/1     3m40s
+
+C:\Users\manis>kubectl delete -f "C:\Users\manis\strimzi-0.22.1\examples\kafka\kafka-persistent-single.yaml" -n kafka
+kafka.kafka.strimzi.io "my-cluster" deleted
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                            READY   STATUS        RESTARTS   AGE
+pod/my-cluster-zookeeper-0                      0/1     Terminating   0          3m59s
+pod/strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running       0          44m
+
+NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/strimzi-cluster-operator   1/1     1            1           44m
+
+NAME                                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/strimzi-cluster-operator-698944bf78   1         1         1       44m
+
+C:\Users\manis>kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+kafka.kafka.strimzi.io/my-cluster created
+
+C:\Users\manis>kubectl -n kafka get pod
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          4s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          45m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          6s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          45m
+
+C:\Users\manis>kubectl -n kafka get pod
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          8s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          45m
+
+C:\Users\manis>kubectl -n kafka get pod
+NAME                                        READY   STATUS              RESTARTS   AGE
+my-cluster-zookeeper-0                      0/1     ContainerCreating   0          9s
+strimzi-cluster-operator-698944bf78-9dkvp   1/1     Running             0          45m
+
+C:\Users\manis>kubectl -n kafka get pod
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          107s
+my-cluster-kafka-0                           1/1     Running   0          2m17s
+my-cluster-zookeeper-0                       1/1     Running   0          2m50s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          48m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          111s
+my-cluster-kafka-0                           1/1     Running   0          2m21s
+my-cluster-zookeeper-0                       1/1     Running   0          2m54s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          48m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          114s
+pod/my-cluster-kafka-0                           1/1     Running   0          2m24s
+pod/my-cluster-zookeeper-0                       1/1     Running   0          2m57s
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          48m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   2m24s
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   2m24s
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     2m58s
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   2m58s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-cluster-entity-operator   1/1     1            1           114s
+deployment.apps/strimzi-cluster-operator     1/1     1            1           48m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       114s
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       48m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     2m24s
+statefulset.apps/my-cluster-zookeeper   1/1     2m57s
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          2m24s
+pod/my-cluster-kafka-0                           1/1     Running   0          2m54s
+pod/my-cluster-zookeeper-0                       1/1     Running   0          3m27s
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          48m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   2m55s
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   2m55s
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     3m29s
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   3m29s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-cluster-entity-operator   1/1     1            1           2m25s
+deployment.apps/strimzi-cluster-operator     1/1     1            1           48m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       2m25s
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       48m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     2m55s
+statefulset.apps/my-cluster-zookeeper   1/1     3m28s
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          2m52s
+pod/my-cluster-kafka-0                           1/1     Running   0          3m22s
+pod/my-cluster-zookeeper-0                       1/1     Running   0          3m55s
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          49m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   3m22s
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   3m22s
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     3m56s
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   3m56s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-cluster-entity-operator   1/1     1            1           2m52s
+deployment.apps/strimzi-cluster-operator     1/1     1            1           49m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       2m52s
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       49m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     3m22s
+statefulset.apps/my-cluster-zookeeper   1/1     3m55s
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka run kafka-producer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --broker-list my-cluster-kafka-bootstrap:9092 --topic my-topic
+If you don't see a command prompt, try pressing enter.
+>
+[2021-04-26 03:18:30,902] WARN [Producer clientId=console-producer] Error while fetching metadata with correlation id 3 : {my-topic=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:18:31,026] WARN [Producer clientId=console-producer] Error while fetching metadata with correlation id 4 : {my-topic=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+>hello
+>sent me
+>messages
+>^CE0425 20:18:42.270792    5240 v2.go:105] EOF
+pod "kafka-producer" deleted
+pod kafka/kafka-producer terminated (Error)
+
+C:\Users\manis>kubectl -n kafka run kafka-producer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --broker-list my-cluster-kafka-bootstrap:9092 --topic my-topic
+
+C:\Users\manis>
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          4m17s
+my-cluster-kafka-0                           1/1     Running   0          4m47s
+my-cluster-zookeeper-0                       1/1     Running   0          5m20s
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          50m
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic my-topic --from-beginning
+If you don't see a command prompt, try pressing enter.
+
+
+hello
+sent me
+messages
+
+
+^CProcessed a total of 4 messages
+pod "kafka-consumer" deleted
+pod kafka/kafka-consumer terminated (Error)
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic my-topic --from-beginning
+If you don't see a command prompt, try pressing enter.
+
+hello
+sent me
+messages
+
+^CProcessed a total of 4 messages
+pod "kafka-consumer" deleted
+pod kafka/kafka-consumer terminated (Error)
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          5m10s
+pod/my-cluster-kafka-0                           1/1     Running   0          5m40s
+pod/my-cluster-zookeeper-0                       1/1     Running   0          6m13s
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          51m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   5m40s
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   5m40s
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     6m14s
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   6m14s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-cluster-entity-operator   1/1     1            1           5m10s
+deployment.apps/strimzi-cluster-operator     1/1     1            1           51m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       5m10s
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       51m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     5m40s
+statefulset.apps/my-cluster-zookeeper   1/1     6m13s
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic my-topic --from-beginning
+
+C:\Users\manis>kubectl -n kafka run kafka-producer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic
+If you don't see a command prompt, try pressing enter.
+>[2021-04-26 03:26:24,252] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:24,254] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:24,347] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:24,348] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:24,448] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:24,448] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:24,650] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:24,650] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:25,006] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:25,007] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:25,713] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:25,714] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:26,874] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:26,874] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:27,936] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:27,937] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:29,149] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 03:26:29,149] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+^Cpod "kafka-producer" deleted
+pod kafka/kafka-producer terminated (Error)
+
+C:\Users\manis>notepad testme
+
+C:\Users\manis>kubectl apply -f "testme.txt"
+service/kafkarest created
+deployment.apps/kafkarest created
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+kafkarest-554bd7b6dd-qfh5z   0/1     ContainerCreating   0          12s
+
+C:\Users\manis>kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+kafkarest-554bd7b6dd-qfh5z   0/1     ContainerCreating   0          14s
+
+C:\Users\manis>kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+kafkarest-554bd7b6dd-qfh5z   0/1     ContainerCreating   0          15s
+
+C:\Users\manis>kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+kafkarest-554bd7b6dd-qfh5z   0/1     ContainerCreating   0          18s
+
+C:\Users\manis>kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+kafkarest-554bd7b6dd-qfh5z   0/1     ContainerCreating   0          19s
+
+C:\Users\manis>kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+kafkarest-554bd7b6dd-qfh5z   0/1     ContainerCreating   0          20s
+
+C:\Users\manis>kubectl delete pod kafkarest-554bd7b6dd-qfh5z
+pod "kafkarest-554bd7b6dd-qfh5z" deleted
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n apply -f "testme.txt"
+Error: unknown shorthand flag: 'f' in -f
+See 'kubectl --help' for usage.
+
+C:\Users\manis>kubectl -n kafka apply -f "testme.txt"
+deployment.apps/kafkarest created
+error: the namespace from the provided object "default" does not match the namespace "kafka". You must pass '--namespace=default' to perform this operation.
+
+C:\Users\manis>notepad testme.txt
+
+C:\Users\manis>kubectl -n kafka apply -f "testme.txt"
+service/kafkarest created
+deployment.apps/kafkarest unchanged
+
+C:\Users\manis>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+kafkarest-554bd7b6dd-t5gsw   1/1     Running   0          111s
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-554bd7b6dd-9klvk                   1/1     Running   0          72s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          27m
+my-cluster-kafka-0                           1/1     Running   0          28m
+my-cluster-zookeeper-0                       1/1     Running   0          28m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          73m
+
+C:\Users\manis>kubectl delete pod kafkarest-554bd7b6dd-t5gsw
+pod "kafkarest-554bd7b6dd-t5gsw" deleted
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-554bd7b6dd-9klvk                   1/1     Running   0          117s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          28m
+my-cluster-kafka-0                           1/1     Running   0          28m
+my-cluster-zookeeper-0                       1/1     Running   0          29m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          74m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-554bd7b6dd-9klvk                   1/1     Running   0          2m14s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          28m
+my-cluster-kafka-0                           1/1     Running   0          29m
+my-cluster-zookeeper-0                       1/1     Running   0          29m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          74m
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-554bd7b6dd-9klvk                   1/1     Running   0          2m26s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          28m
+pod/my-cluster-kafka-0                           1/1     Running   0          29m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          29m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          74m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/kafkarest                     NodePort    10.8.5.169    <none>        8080:31879/TCP               100s
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   29m
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   29m
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     29m
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   29m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m27s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           28m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           75m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-554bd7b6dd                   1         1         1       2m27s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       28m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       75m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     29m
+statefulset.apps/my-cluster-zookeeper   1/1     29m
+
+C:\Users\manis>notepad testme.txt
+
+C:\Users\manis>kubectl expose deployment kafkarest --type=LoadBalancer --name=my-service
+error: couldn't find port via --port flag or introspection
+See 'kubectl expose -h' for help and examples
+
+C:\Users\manis>notepad testme.txt
+
+C:\Users\manis>kubectl delete pod kafkarest-554bd7b6dd-t5gsw
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-554bd7b6dd-9klvk                   1/1     Running   0          7m2s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          33m
+my-cluster-kafka-0                           1/1     Running   0          33m
+my-cluster-zookeeper-0                       1/1     Running   0          34m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          79m
+
+C:\Users\manis>notepad testme.txt
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-554bd7b6dd-9klvk                   1/1     Running   0          7m18s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          33m
+my-cluster-kafka-0                           1/1     Running   0          34m
+my-cluster-zookeeper-0                       1/1     Running   0          34m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          79m
+
+C:\Users\manis>kubectl delete pod kafkarest-554bd7b6dd-9klvk
+Error from server (NotFound): pods "kafkarest-554bd7b6dd-9klvk" not found
+
+C:\Users\manis>kubectl -n kafka delete pod kafkarest-554bd7b6dd-9klvk
+pod "kafkarest-554bd7b6dd-9klvk" deleted
+
+C:\Users\manis>kubectl -n kafka apply -f "testme.txt"
+deployment.apps/kafkarest configured
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS        RESTARTS   AGE
+kafkarest-554bd7b6dd-xd6gv                   0/1     Terminating   0          21s
+kafkarest-798b7c46df-b7gvd                   1/1     Running       0          8s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running       0          34m
+my-cluster-kafka-0                           1/1     Running       0          34m
+my-cluster-zookeeper-0                       1/1     Running       0          35m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running       0          80m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS        RESTARTS   AGE
+kafkarest-554bd7b6dd-xd6gv                   0/1     Terminating   0          24s
+kafkarest-798b7c46df-b7gvd                   1/1     Running       0          11s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running       0          34m
+my-cluster-kafka-0                           1/1     Running       0          34m
+my-cluster-zookeeper-0                       1/1     Running       0          35m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running       0          80m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS        RESTARTS   AGE
+kafkarest-554bd7b6dd-xd6gv                   0/1     Terminating   0          25s
+kafkarest-798b7c46df-b7gvd                   1/1     Running       0          12s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running       0          34m
+my-cluster-kafka-0                           1/1     Running       0          34m
+my-cluster-zookeeper-0                       1/1     Running       0          35m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running       0          80m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-798b7c46df-b7gvd                   1/1     Running   0          14s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          34m
+my-cluster-kafka-0                           1/1     Running   0          34m
+my-cluster-zookeeper-0                       1/1     Running   0          35m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          80m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-798b7c46df-b7gvd                   1/1     Running   0          16s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          34m
+my-cluster-kafka-0                           1/1     Running   0          34m
+my-cluster-zookeeper-0                       1/1     Running   0          35m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          80m
+
+C:\Users\manis>kubectl expose deployment kafkarest --type=LoadBalancer --name=my-service
+error: couldn't find port via --port flag or introspection
+See 'kubectl expose -h' for help and examples
+
+C:\Users\manis>notepad testme.txt
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-798b7c46df-b7gvd                   1/1     Running   0          2m28s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          36m
+my-cluster-kafka-0                           1/1     Running   0          37m
+my-cluster-zookeeper-0                       1/1     Running   0          37m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          82m
+
+C:\Users\manis>kubectl delete pod kafkarest-798b7c46df-b7gvd
+Error from server (NotFound): pods "kafkarest-798b7c46df-b7gvd" not found
+
+C:\Users\manis>kubectl -n kafka delete pod kafkarest-798b7c46df-b7gvd
+pod "kafkarest-798b7c46df-b7gvd" deleted
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka apply -f "testme.txt" --port 8080
+Error: unknown flag: --port
+See 'kubectl apply --help' for usage.
+
+C:\Users\manis>kubectl -n kafka apply -f "testme.txt" --port=8080
+Error: unknown flag: --port
+See 'kubectl apply --help' for usage.
+
+C:\Users\manis>kubectl describe deployment kafkarest
+Name:                   kafkarest
+Namespace:              default
+CreationTimestamp:      Sun, 25 Apr 2021 20:39:44 -0700
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=kafkarest
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=kafkarest
+  Containers:
+   jparest:
+    Image:        manishkumar2020/kafka:b699c22
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   kafkarest-554bd7b6dd (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  13m   deployment-controller  Scaled up replica set kafkarest-554bd7b6dd to 1
+
+C:\Users\manis>kubectl expose deployment kafkarest --type=LoadBalancer --name=my-service --port=8080
+service/my-service exposed
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-95sb2                   1/1     Running   0          2m40s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          39m
+pod/my-cluster-kafka-0                           1/1     Running   0          40m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          40m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          85m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/kafkarest                     NodePort    10.8.5.169    <none>        8080:31879/TCP               12m
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   40m
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   40m
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     40m
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   40m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           13m
+deployment.apps/my-cluster-entity-operator   1/1     1            1           39m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           85m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-554bd7b6dd                   0         0         0       13m
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       5m24s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       39m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       85m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     40m
+statefulset.apps/my-cluster-zookeeper   1/1     40m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-95sb2                   1/1     Running   0          3m1s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          39m
+pod/my-cluster-kafka-0                           1/1     Running   0          40m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          40m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          86m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/kafkarest                     NodePort    10.8.5.169    <none>        8080:31879/TCP               12m
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   40m
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   40m
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     40m
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   40m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           13m
+deployment.apps/my-cluster-entity-operator   1/1     1            1           39m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           86m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-554bd7b6dd                   0         0         0       13m
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       5m45s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       39m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       86m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     40m
+statefulset.apps/my-cluster-zookeeper   1/1     40m
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-798b7c46df-95sb2                   1/1     Running   0          3m13s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          40m
+my-cluster-kafka-0                           1/1     Running   0          40m
+my-cluster-zookeeper-0                       1/1     Running   0          41m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          86m
+
+C:\Users\manis>kubectl -n kafka delete deployment kafkarest
+deployment.apps "kafkarest" deleted
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          40m
+pod/my-cluster-kafka-0                           1/1     Running   0          40m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          41m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          86m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/kafkarest                     NodePort    10.8.5.169    <none>        8080:31879/TCP               13m
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   40m
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   40m
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     41m
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   41m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-cluster-entity-operator   1/1     1            1           40m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           86m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       40m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       86m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     40m
+statefulset.apps/my-cluster-zookeeper   1/1     41m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          40m
+pod/my-cluster-kafka-0                           1/1     Running   0          41m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          41m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          86m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/kafkarest                     NodePort    10.8.5.169    <none>        8080:31879/TCP               13m
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   41m
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   41m
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     41m
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   41m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-cluster-entity-operator   1/1     1            1           40m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           86m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       40m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       86m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     41m
+statefulset.apps/my-cluster-zookeeper   1/1     41m
+
+C:\Users\manis>kubectl -n kafka delete svc service/kafkarest
+error: there is no need to specify a resource type as a separate argument when passing arguments in resource/name form (e.g. 'kubectl get resource/<resource_name>' instead of 'kubectl get resource resource/<resource_name>'
+
+C:\Users\manis>kubectl -n kafka delete svc kafkarest
+service "kafkarest" deleted
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          40m
+pod/my-cluster-kafka-0                           1/1     Running   0          41m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          42m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          87m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   41m
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   41m
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     42m
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   42m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/my-cluster-entity-operator   1/1     1            1           40m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           87m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       40m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       87m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     41m
+statefulset.apps/my-cluster-zookeeper   1/1     42m
+
+C:\Users\manis>kubectl -n kafka apply -f "testme.txt"
+deployment.apps/kafkarest created
+
+C:\Users\manis>kubectl expose deployment kafkarest --type=LoadBalancer --name=my-service --port=8080
+Error from server (AlreadyExists): services "my-service" already exists
+
+C:\Users\manis>kubectl expose deployment kafkarest --type=LoadBalancer --name=my-service --port=8080
+Error from server (AlreadyExists): services "my-service" already exists
+
+C:\Users\manis>kubectl describe deployment kafkarest
+Name:                   kafkarest
+Namespace:              default
+CreationTimestamp:      Sun, 25 Apr 2021 20:39:44 -0700
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=kafkarest
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=kafkarest
+  Containers:
+   jparest:
+    Image:        manishkumar2020/kafka:b699c22
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   kafkarest-554bd7b6dd (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  16m   deployment-controller  Scaled up replica set kafkarest-554bd7b6dd to 1
+
+C:\Users\manis>kubectl -n kafka get pods
+NAME                                         READY   STATUS    RESTARTS   AGE
+kafkarest-798b7c46df-tbzqf                   1/1     Running   0          23s
+my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          41m
+my-cluster-kafka-0                           1/1     Running   0          42m
+my-cluster-zookeeper-0                       1/1     Running   0          42m
+strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          87m
+
+C:\Users\manis>kubectl -n kafka all
+Error: unknown command "all" for "kubectl"
+Run 'kubectl --help' for usage.
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          29s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          41m
+pod/my-cluster-kafka-0                           1/1     Running   0          42m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          42m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          87m
+
+NAME                                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP   10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   42m
+service/my-cluster-kafka-brokers      ClusterIP   None          <none>        9091/TCP,9092/TCP,9093/TCP   42m
+service/my-cluster-zookeeper-client   ClusterIP   10.8.4.115    <none>        2181/TCP                     42m
+service/my-cluster-zookeeper-nodes    ClusterIP   None          <none>        2181/TCP,2888/TCP,3888/TCP   42m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           29s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           41m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           87m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       29s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       41m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       87m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     42m
+statefulset.apps/my-cluster-zookeeper   1/1     42m
+
+C:\Users\manis>kubectl get all
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-554bd7b6dd-7qm6c   1/1     Running   0          13m
+
+NAME                 TYPE           CLUSTER-IP   EXTERNAL-IP     PORT(S)          AGE
+service/kafkarest    NodePort       10.8.1.98    <none>          8080:31316/TCP   16m
+service/kubernetes   ClusterIP      10.8.0.1     <none>          443/TCP          105m
+service/my-service   LoadBalancer   10.8.1.105   34.122.96.184   8080:31365/TCP   2m25s
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest   1/1     1            1           16m
+
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-554bd7b6dd   1         1         1       16m
+
+C:\Users\manis>kubectl delete svc kafkarest
+service "kafkarest" deleted
+
+C:\Users\manis>kubectl delete svc my-service
+service "my-service" deleted
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>kubectl get all
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-554bd7b6dd-7qm6c   1/1     Running   0          14m
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.8.0.1     <none>        443/TCP   106m
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest   1/1     1            1           17m
+
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-554bd7b6dd   1         1         1       17m
+
+C:\Users\manis>kubectl delet deployment kafkarest
+Error: unknown command "delet" for "kubectl"
+
+Did you mean this?
+        delete
+
+Run 'kubectl --help' for usage.
+
+C:\Users\manis>kubectl delete deployment kafkarest
+deployment.apps "kafkarest" deleted
+
+C:\Users\manis>kubectl get all
+NAME                             READY   STATUS        RESTARTS   AGE
+pod/kafkarest-554bd7b6dd-7qm6c   0/1     Terminating   0          15m
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.8.0.1     <none>        443/TCP   106m
+
+C:\Users\manis>kubectl -n kafka expose deployment kafkarest --type=LoadBalancer --name=my-service --port=8080
+service/my-service exposed
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m29s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          89m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     44m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   44m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               11s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m30s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           89m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m30s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       89m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m35s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          89m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     44m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   44m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               16s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m35s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m35s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m37s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          89m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     44m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   44m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               18s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m37s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m37s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m39s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     44m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   44m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               20s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m40s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m40s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m41s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     44m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   44m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               22s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m42s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m42s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m43s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     44m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   44m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               24s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m43s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m44s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m45s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     44m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   44m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               26s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m45s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m45s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m48s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          43m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          44m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     45m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   45m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               29s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m48s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           43m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m48s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       43m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     44m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m53s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          44m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          45m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     45m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   45m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               34s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m53s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           44m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m53s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       44m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     45m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          2m55s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          44m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          45m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     45m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   45m
+service/my-service                    LoadBalancer   10.8.6.3      <pending>     8080:31452/TCP               36s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           2m55s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           44m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       2m55s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       44m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     45m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          3m1s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          44m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          45m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     45m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   45m
+service/my-service                    LoadBalancer   10.8.6.3      34.67.35.74   8080:31452/TCP               42s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           3m1s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           44m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       3m1s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       44m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     45m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          3m3s
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          44m
+pod/my-cluster-kafka-0                           1/1     Running   0          44m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          45m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          90m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   44m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     45m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   45m
+service/my-service                    LoadBalancer   10.8.6.3      34.67.35.74   8080:31452/TCP               44s
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           3m3s
+deployment.apps/my-cluster-entity-operator   1/1     1            1           44m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           90m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       3m3s
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       44m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       90m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     44m
+statefulset.apps/my-cluster-zookeeper   1/1     45m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          17m
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          58m
+pod/my-cluster-kafka-0                           1/1     Running   0          59m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          59m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          104m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   59m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   59m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     59m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   59m
+service/my-service                    LoadBalancer   10.8.6.3      34.67.35.74   8080:31452/TCP               15m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           17m
+deployment.apps/my-cluster-entity-operator   1/1     1            1           58m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           105m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       17m
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       58m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       105m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     59m
+statefulset.apps/my-cluster-zookeeper   1/1     59m
+
+C:\Users\manis>
+C:\Users\manis>kubectl get all
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.8.0.1     <none>        443/TCP   136m
+
+C:\Users\manis>kubectl -n kafka get all
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/kafkarest-798b7c46df-tbzqf                   1/1     Running   0          32m
+pod/my-cluster-entity-operator-7c5b48c44-v9dtm   3/3     Running   0          73m
+pod/my-cluster-kafka-0                           1/1     Running   0          74m
+pod/my-cluster-zookeeper-0                       1/1     Running   0          74m
+pod/strimzi-cluster-operator-698944bf78-9dkvp    1/1     Running   0          120m
+
+NAME                                  TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+service/my-cluster-kafka-bootstrap    ClusterIP      10.8.14.182   <none>        9091/TCP,9092/TCP,9093/TCP   74m
+service/my-cluster-kafka-brokers      ClusterIP      None          <none>        9091/TCP,9092/TCP,9093/TCP   74m
+service/my-cluster-zookeeper-client   ClusterIP      10.8.4.115    <none>        2181/TCP                     74m
+service/my-cluster-zookeeper-nodes    ClusterIP      None          <none>        2181/TCP,2888/TCP,3888/TCP   74m
+service/my-service                    LoadBalancer   10.8.6.3      34.67.35.74   8080:31452/TCP               30m
+
+NAME                                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/kafkarest                    1/1     1            1           32m
+deployment.apps/my-cluster-entity-operator   1/1     1            1           73m
+deployment.apps/strimzi-cluster-operator     1/1     1            1           120m
+
+NAME                                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/kafkarest-798b7c46df                   1         1         1       32m
+replicaset.apps/my-cluster-entity-operator-7c5b48c44   1         1         1       73m
+replicaset.apps/strimzi-cluster-operator-698944bf78    1         1         1       120m
+
+NAME                                    READY   AGE
+statefulset.apps/my-cluster-kafka       1/1     74m
+statefulset.apps/my-cluster-zookeeper   1/1     74m
+
+C:\Users\manis>kubectl exec --stdin --tty kafkarest -- /bin/bash
+Error from server (NotFound): pods "kafkarest" not found
+
+C:\Users\manis>kubectl exec --stdin --tty kafkarest-798b7c46df-tbzqf -- /bin/bash
+Error from server (NotFound): pods "kafkarest-798b7c46df-tbzqf" not found
+
+C:\Users\manis>kubectl -n kafka exec --stdin --tty kafkarest-798b7c46df-tbzqf -- /bin/bash
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# ls
+BUILDING.txt  CONTRIBUTING.md  LICENSE  NOTICE  README.md  RELEASE-NOTES  RUNNING.txt  bin  conf  lib  logs  native-jni-lib  temp  webapps  work
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# pwd
+/usr/local/tomcat
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# ls -l
+total 152
+-rw-r--r-- 1 root root 18982 Mar  4 21:54 BUILDING.txt
+-rw-r--r-- 1 root root  5587 Mar  4 21:54 CONTRIBUTING.md
+-rw-r--r-- 1 root root 57092 Mar  4 21:54 LICENSE
+-rw-r--r-- 1 root root  2333 Mar  4 21:54 NOTICE
+-rw-r--r-- 1 root root  3257 Mar  4 21:54 README.md
+-rw-r--r-- 1 root root  6898 Mar  4 21:54 RELEASE-NOTES
+-rw-r--r-- 1 root root 16507 Mar  4 21:54 RUNNING.txt
+drwxr-xr-x 2 root root  4096 Mar 13 15:30 bin
+drwxr-xr-x 1 root root  4096 Apr 26 03:55 conf
+drwxr-xr-x 2 root root  4096 Mar 13 15:29 lib
+drwxrwxrwx 1 root root  4096 Apr 26 03:55 logs
+drwxr-xr-x 2 root root  4096 Mar 13 15:29 native-jni-lib
+drwxrwxrwx 2 root root  4096 Mar 13 15:29 temp
+drwxr-xr-x 1 root root  4096 Apr 26 03:55 webapps
+drwxrwxrwx 1 root root  4096 Apr 26 03:55 work
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/share/
+adduser/         base-passwd/     common-licenses/ doc/             fonts/           gnupg/           locale/          p11-kit/         pixmaps/         tabset/
+applications/    bash-completion/ debconf/         doc-base/        gcc-8/           info/            man/             pam/             polkit-1/        terminfo/
+apport/          binfmts/         debhelper/       dpkg/            gdb/             keyrings/        menu/            pam-configs/     python/          xml/
+apps/            bug/             debianutils/     emacs/           git-core/        libc-bin/        mercurial/       perl/            readline/        zoneinfo/
+base-files/      ca-certificates/ dict/            fontconfig/      gitweb/          lintian/         misc/            perl5/           sensible-utils/  zsh/
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/share/
+adduser/         base-passwd/     common-licenses/ doc/             fonts/           gnupg/           locale/          p11-kit/         pixmaps/         tabset/
+applications/    bash-completion/ debconf/         doc-base/        gcc-8/           info/            man/             pam/             polkit-1/        terminfo/
+apport/          binfmts/         debhelper/       dpkg/            gdb/             keyrings/        menu/            pam-configs/     python/          xml/
+apps/            bug/             debianutils/     emacs/           git-core/        libc-bin/        mercurial/       perl/            readline/        zoneinfo/
+base-files/      ca-certificates/ dict/            fontconfig/      gitweb/          lintian/         misc/            perl5/           sensible-utils/  zsh/
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# echo $CATALINA_HOME
+/usr/local/tomcat
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/local/tomcat/
+BUILDING.txt     LICENSE          README.md        RUNNING.txt      conf/            logs/            temp/            work/
+CONTRIBUTING.md  NOTICE           RELEASE-NOTES    bin/             lib/             native-jni-lib/  webapps/
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/local/tomcat/logs/
+catalina.2021-04-26.log              localhost.2021-04-26.log             manager.2021-04-26.log
+host-manager.2021-04-26.log          localhost_access_log.2021-04-26.txt
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/local/tomcat/logs/catalina.2021-04-26.log
+26-Apr-2021 03:55:54.496 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.44
+26-Apr-2021 03:55:54.502 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 4 2021 21:49:34 UTC
+26-Apr-2021 03:55:54.503 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.44.0
+26-Apr-2021 03:55:54.503 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+26-Apr-2021 03:55:54.507 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.89+
+26-Apr-2021 03:55:54.510 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+26-Apr-2021 03:55:54.510 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/local/openjdk-11
+26-Apr-2021 03:55:54.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.10+9
+26-Apr-2021 03:55:54.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+26-Apr-2021 03:55:54.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+26-Apr-2021 03:55:54.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+26-Apr-2021 03:55:54.525 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+26-Apr-2021 03:55:54.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+26-Apr-2021 03:55:54.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+26-Apr-2021 03:55:54.527 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+26-Apr-2021 03:55:54.527 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+26-Apr-2021 03:55:54.527 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+26-Apr-2021 03:55:54.527 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+26-Apr-2021 03:55:54.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+26-Apr-2021 03:55:54.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+26-Apr-2021 03:55:54.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+26-Apr-2021 03:55:54.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+26-Apr-2021 03:55:54.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+26-Apr-2021 03:55:54.531 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+26-Apr-2021 03:55:54.531 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+26-Apr-2021 03:55:54.538 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.26] using APR version [1.6.5].
+26-Apr-2021 03:55:54.539 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+26-Apr-2021 03:55:54.539 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+26-Apr-2021 03:55:54.544 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1d  10 Sep 2019]
+26-Apr-2021 03:55:55.131 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+26-Apr-2021 03:55:55.189 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1168] milliseconds
+26-Apr-2021 03:55:55.313 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+26-Apr-2021 03:55:55.314 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.44]
+26-Apr-2021 03:55:55.348 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/kafka-0.0.1-SNAPSHOT.war]
+26-Apr-2021 03:55:59.100 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+26-Apr-2021 03:56:05.366 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/kafka-0.0.1-SNAPSHOT.war] has finished in [10,017] ms
+26-Apr-2021 03:56:05.367 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/usr/local/tomcat/webapps/docs]
+26-Apr-2021 03:56:05.409 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/usr/local/tomcat/webapps/docs] has finished in [42] ms
+26-Apr-2021 03:56:05.412 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/usr/local/tomcat/webapps/host-manager]
+26-Apr-2021 03:56:05.467 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/usr/local/tomcat/webapps/host-manager] has finished in [56] ms
+26-Apr-2021 03:56:05.468 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/usr/local/tomcat/webapps/ROOT]
+26-Apr-2021 03:56:05.490 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/usr/local/tomcat/webapps/ROOT] has finished in [23] ms
+26-Apr-2021 03:56:05.491 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/usr/local/tomcat/webapps/manager]
+26-Apr-2021 03:56:05.544 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/usr/local/tomcat/webapps/manager] has finished in [53] ms
+26-Apr-2021 03:56:05.549 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/usr/local/tomcat/webapps/examples]
+26-Apr-2021 03:56:05.787 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/usr/local/tomcat/webapps/examples] has finished in [238] ms
+26-Apr-2021 03:56:05.791 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+26-Apr-2021 03:56:05.810 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [10619] milliseconds
+26-Apr-2021 04:11:08.789 WARNING [http-nio-8080-exec-8] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/local/tomcat/logs/
+catalina.2021-04-26.log              localhost.2021-04-26.log             manager.2021-04-26.log
+host-manager.2021-04-26.log          localhost_access_log.2021-04-26.txt
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/local/tomcat/logs/localhost.2021-04-26.log
+26-Apr-2021 03:55:59.211 INFO [main] org.apache.catalina.core.ApplicationContext.log 3 Spring WebApplicationInitializers detected on classpath
+26-Apr-2021 03:56:02.779 INFO [main] org.apache.catalina.core.ApplicationContext.log Initializing Spring embedded WebApplicationContext
+26-Apr-2021 03:56:05.780 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+26-Apr-2021 03:56:05.780 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+26-Apr-2021 03:56:05.781 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@76e579d8')
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/local/tomcat/logs/localhost_access_log.2021-04-26.txt
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET / HTTP/1.1" 200 11157
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /tomcat.css HTTP/1.1" 200 5542
+10.128.0.40 - - [26/Apr/2021:04:08:35 +0000] "GET /tomcat.svg HTTP/1.1" 200 67795
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-nav.png HTTP/1.1" 200 1401
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-upper.png HTTP/1.1" 200 3103
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /asf-logo-wide.svg HTTP/1.1" 200 27235
+10.128.0.39 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-button.png HTTP/1.1" 200 713
+10.128.0.39 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-middle.png HTTP/1.1" 200 1918
+10.128.0.40 - - [26/Apr/2021:04:08:35 +0000] "GET /favicon.ico HTTP/1.1" 200 21630
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET / HTTP/1.1" 200 11157
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /tomcat.css HTTP/1.1" 200 5542
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /tomcat.svg HTTP/1.1" 200 67795
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-nav.png HTTP/1.1" 200 1401
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /asf-logo-wide.svg HTTP/1.1" 200 27235
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-upper.png HTTP/1.1" 200 3103
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-button.png HTTP/1.1" 200 713
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-middle.png HTTP/1.1" 200 1918
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /favicon.ico HTTP/1.1" 200 21630
+10.128.0.39 - - [26/Apr/2021:04:09:26 +0000] "GET /SWE645HW4/students/authors HTTP/1.1" 404 785
+10.128.0.39 - - [26/Apr/2021:04:09:31 +0000] "GET /SWE645HW4/students HTTP/1.1" 404 773
+10.128.0.39 - - [26/Apr/2021:04:09:36 +0000] "GET / HTTP/1.1" 200 11157
+10.128.0.39 - - [26/Apr/2021:04:11:09 +0000] "GET /kafka-0.0.1-SNAPSHOT/students/authors HTTP/1.1" 200 8
+10.128.0.39 - - [26/Apr/2021:04:14:23 +0000] "POST /kafka-0.0.1-SNAPSHOT/students/kafkapost HTTP/1.1" 404 713
+10.128.0.39 - - [26/Apr/2021:04:16:06 +0000] "POST /kafka-0.0.1-SNAPSHOT/students/kafkapost HTTP/1.1" 404 713
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# kafka-0.0.1-SNAPSHOT/students/authors
+bash: kafka-0.0.1-SNAPSHOT/students/authors: No such file or directory
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat# cat /usr/local/tomcat/logs/localhost_access_log.2021-04-26.txt
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET / HTTP/1.1" 200 11157
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /tomcat.css HTTP/1.1" 200 5542
+10.128.0.40 - - [26/Apr/2021:04:08:35 +0000] "GET /tomcat.svg HTTP/1.1" 200 67795
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-nav.png HTTP/1.1" 200 1401
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-upper.png HTTP/1.1" 200 3103
+10.4.2.1 - - [26/Apr/2021:04:08:35 +0000] "GET /asf-logo-wide.svg HTTP/1.1" 200 27235
+10.128.0.39 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-button.png HTTP/1.1" 200 713
+10.128.0.39 - - [26/Apr/2021:04:08:35 +0000] "GET /bg-middle.png HTTP/1.1" 200 1918
+10.128.0.40 - - [26/Apr/2021:04:08:35 +0000] "GET /favicon.ico HTTP/1.1" 200 21630
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET / HTTP/1.1" 200 11157
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /tomcat.css HTTP/1.1" 200 5542
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /tomcat.svg HTTP/1.1" 200 67795
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-nav.png HTTP/1.1" 200 1401
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /asf-logo-wide.svg HTTP/1.1" 200 27235
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-upper.png HTTP/1.1" 200 3103
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-button.png HTTP/1.1" 200 713
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /bg-middle.png HTTP/1.1" 200 1918
+10.128.0.39 - - [26/Apr/2021:04:08:50 +0000] "GET /favicon.ico HTTP/1.1" 200 21630
+10.128.0.39 - - [26/Apr/2021:04:09:26 +0000] "GET /SWE645HW4/students/authors HTTP/1.1" 404 785
+10.128.0.39 - - [26/Apr/2021:04:09:31 +0000] "GET /SWE645HW4/students HTTP/1.1" 404 773
+10.128.0.39 - - [26/Apr/2021:04:09:36 +0000] "GET / HTTP/1.1" 200 11157
+10.128.0.39 - - [26/Apr/2021:04:11:09 +0000] "GET /kafka-0.0.1-SNAPSHOT/students/authors HTTP/1.1" 200 8
+10.128.0.39 - - [26/Apr/2021:04:14:23 +0000] "POST /kafka-0.0.1-SNAPSHOT/students/kafkapost HTTP/1.1" 404 713
+10.128.0.39 - - [26/Apr/2021:04:16:06 +0000] "POST /kafka-0.0.1-SNAPSHOT/students/kafkapost HTTP/1.1" 404 713
+10.4.2.1 - - [26/Apr/2021:05:05:24 +0000] "GET /kafka-0.0.1-SNAPSHOT/students/authors HTTP/1.1" 200 8
+10.4.2.1 - - [26/Apr/2021:05:07:33 +0000] "POST /kafka-0.0.1-SNAPSHOT/students/kafkapost?stdid=myname HTTP/1.1" 204 -
+10.4.2.1 - - [26/Apr/2021:05:07:37 +0000] "POST /kafka-0.0.1-SNAPSHOT/students/kafkapost HTTP/1.1" 204 -
+10.128.0.39 - - [26/Apr/2021:05:09:36 +0000] "GET /kafka-0.0.1-SNAPSHOT/students HTTP/1.1" 400 164
+10.4.2.1 - - [26/Apr/2021:05:10:12 +0000] "GET /kafka-0.0.1-SNAPSHOT/students HTTP/1.1" 200 2
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+root@kafkarest-798b7c46df-tbzqf:/usr/local/tomcat#
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.19042.928]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic my-topic --from-beginning
+
+C:\Users\manis>gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project nth-skyline-306500
+Fetching cluster endpoint and auth data.
+kubeconfig entry generated for cluster-1.
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic my-topic --from-beginning
+If you don't see a command prompt, try pressing enter.
+
+hello
+sent me
+messages
+^CProcessed a total of 4 messages
+pod "kafka-consumer" deleted
+pod kafka/kafka-consumer terminated (Error)
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic kafkaexample --from-beginning
+If you don't see a command prompt, try pressing enter.
+[2021-04-26 05:02:39,074] WARN [Consumer clientId=consumer-console-consumer-16657-1, groupId=console-consumer-16657] Error while fetching metadata with correlation id 2 : {kafkaexample=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2021-04-26 05:02:39,191] WARN [Consumer clientId=consumer-console-consumer-16657-1, groupId=console-consumer-16657] Error while fetching metadata with correlation id 7 : {kafkaexample=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+^CProcessed a total of 0 messages
+pod "kafka-consumer" deleted
+pod kafka/kafka-consumer terminated (Error)
+
+C:\Users\manis>kubectl -n kafka run kafka-producer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --broker-list my-cluster-kafka-bootstrap:9092 --topic kafkaexample
+If you don't see a command prompt, try pressing enter.
+>test me
+>hi
+>exit
+>^CE0425 22:03:58.301124   15768 v2.go:105] EOF
+pod "kafka-producer" deleted
+pod kafka/kafka-producer terminated (Error)
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic kafkaexample --from-beginning
+If you don't see a command prompt, try pressing enter.
+test me
+hi
+exit
+^CProcessed a total of 3 messages
+E0425 22:04:14.457831   19452 v2.go:105] EOF
+pod "kafka-consumer" deleted
+pod kafka/kafka-consumer terminated (Error)
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic kafkaexample --from-beginning
+If you don't see a command prompt, try pressing enter.
+test me
+hi
+exit
+{"stdradio":null,"stdlike":null,"stddata":null,"stdid":"manish","stdname":null,"stdlastname":null,"stdadd":null,"stdcity":null,"stdstate":null,"stdzip":null,"stddate":null,"stdtel":null,"stdemail":null,"stdurl":null,"stdmonth":null,"stdyear":null,"stdcheckbox":null}
+{"stdradio":null,"stdlike":null,"stddata":null,"stdid":"manish","stdname":null,"stdlastname":null,"stdadd":null,"stdcity":null,"stdstate":null,"stdzip":null,"stddate":null,"stdtel":null,"stdemail":null,"stdurl":null,"stdmonth":null,"stdyear":null,"stdcheckbox":null}
+^CProcessed a total of 5 messages
+pod "kafka-consumer" deleted
+pod kafka/kafka-consumer terminated (Error)
+
+C:\Users\manis>
+C:\Users\manis>kubectl get kafka topics
+Error from server (NotFound): kafkas.kafka.strimzi.io "topics" not found
+
+C:\Users\manis>kubectl get kafkatopics
+No resources found in default namespace.
+
+C:\Users\manis>kubectl -n kafka get kafkatopics
+NAME                                                                                               CLUSTER      PARTITIONS   REPLICATION FACTOR   READY
+consumer-offsets---84e7a678d08f4bd226872e5cdd4eb527fadc1c6a                                        my-cluster   50           1                    True
+kafkaexample                                                                                       my-cluster   1            1                    True
+my-topic                                                                                           my-cluster   1            1                    True
+strimzi-store-topic---effb8e3e057afce1ecf67c3f5d8e4e3ff177fc55                                     my-cluster   1            1                    True
+strimzi-topic-operator-kstreams-topic-store-changelog---b75e702040b99be8a9263134de3507fc0cc4017b   my-cluster   1            1                    True
+
+C:\Users\manis>kubectl -n kafka delete kafkatopics my-topic
+kafkatopic.kafka.strimzi.io "my-topic" deleted
+
+C:\Users\manis>kubectl -n kafka delete kafkatopics kafkaexample
+kafkatopic.kafka.strimzi.io "kafkaexample" deleted
+
+C:\Users\manis>
+C:\Users\manis>kubectl -n kafka run kafka-producer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --broker-list my-cluster-kafka-bootstrap:9092 --topic kafkaexample
+If you don't see a command prompt, try pressing enter.
+>^Cpod "kafka-producer" deleted
+pod kafka/kafka-producer terminated (Error)
+
+C:\Users\manis>kubectl -n kafka run kafka-consumer -ti --image=quay.io/strimzi/kafka:0.22.1-kafka-2.7.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic kafkaexample --from-beginning
+If you don't see a command prompt, try pressing enter.
+
+^CProcessed a total of 0 messages
+pod "kafka-consumer" deleted
+pod kafka/kafka-consumer terminated (Error)
+
+C:\Users\manis>
+C:\Users\manis>
+
+
+
+
+
+
+
+
+
