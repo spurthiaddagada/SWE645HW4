@@ -4,7 +4,7 @@
  * for the Spring Boot application
  */
 
-package com.example.demo;
+package com.example.kafka;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
