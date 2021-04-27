@@ -14,7 +14,7 @@ public class KafkaApplication {
 	}
 	@Bean
    public WebMvcConfigurer corsConfigurer() {
-       return new WebMvcConfigurerAdapter() {
+       return new WebMvcConfigurer() {
            @Override
            public void addCorsMappings(CorsRegistry registry) {
                registry.addMapping("/**").allowedOrigins("*");
