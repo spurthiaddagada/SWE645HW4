@@ -995,3 +995,22 @@ NAME                                                  DESIRED   CURRENT   READY 
 replicaset.apps/my-release-nginx-ingress-78744b7959   1         1         1       40s
 
 C:\Users\manis\Downloads>
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////
+CREATE TOPIC
+
+C:\Users\manis>kubectl create -n kafka -f  topic.txt
+kafkatopic.kafka.strimzi.io/kafkaexample created
+
+C:\Users\manis>
+C:\Users\manis>
+C:\Users\manis>notepad topic.txt
+
