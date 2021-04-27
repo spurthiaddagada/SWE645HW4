@@ -26,6 +26,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin("*")
 @Path("/students")
