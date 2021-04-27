@@ -67,7 +67,7 @@ public class StudentResource {
 
 	@GET
 
-	public List<Student> getStudentIds() throws JsonMappingException, JsonProcessingException {
+	public List<String> getStudentIds() throws JsonMappingException, JsonProcessingException {
 //        Iterable<Student> students = repo.findAll();
 //        List<String> idList = new ArrayList<String>();
 //        for(Student s : students) {
@@ -80,13 +80,13 @@ public class StudentResource {
 		topics.add("kafkaexample");
 		consumer.subscribe(topics);
 		System.out.println("kafkaexample");
-		ConsumerRecords<String, String> cRecords = consumer.poll(Duration.of(10, ChronoUnit.SECONDS));
-		List<Student> studentList = new ArrayList<>();
+		ConsumerRecords<String, String> cRecords = consumer.poll(Duration.of(60, ChronoUnit.SECONDS));
+		List<String> studentList = new ArrayList<>();
 		ObjectMapper om = new ObjectMapper();
 		for (ConsumerRecord<String, String> record : cRecords) {
 
 			Student s1 = om.readValue(record.value(), Student.class);
-			studentList.add(s1);
+			studentList.add(s1.getStdid());
 			System.out.println(s1);
 		}
 
