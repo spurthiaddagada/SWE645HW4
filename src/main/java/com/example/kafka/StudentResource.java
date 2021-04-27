@@ -80,7 +80,7 @@ public class StudentResource {
 		topics.add("kafkaexample");
 		consumer.subscribe(topics);
 		System.out.println("kafkaexample");
-		ConsumerRecords<String, String> cRecords = consumer.poll(Duration.of(60, ChronoUnit.SECONDS));
+		ConsumerRecords<String, String> cRecords = consumer.poll(Duration.of(10, ChronoUnit.SECONDS));
 		List<String> studentList = new ArrayList<>();
 		ObjectMapper om = new ObjectMapper();
 		for (ConsumerRecord<String, String> record : cRecords) {
