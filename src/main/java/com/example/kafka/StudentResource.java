@@ -101,7 +101,7 @@ public class StudentResource {
 			studentList.add(s1.getStdid());
 			System.out.println(s1);
 		}
-		consumer.close();
+		//consumer.close();
 		System.out.println("I am inside GET");
 		// return idList;
 		return studentList;
