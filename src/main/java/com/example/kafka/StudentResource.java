@@ -81,16 +81,6 @@ public class StudentResource {
 		topics.add("kafkaexample");
 		consumer.subscribe(topics);
 		System.out.println("kafkaexample");
-		List<PartitionInfo> partitionInfoList=consumer.partitionsFor(TOPIC);
-	List<TopicPartition> topicPartitions=new ArrayList<>();
-	
-	
-	for(PartitionInfo partitionInfo: partitionInfoList)
-	{
-		TopicPartition topicPartition=new TopicPartition(TOPIC,partitionInfo.partition());
-		topicPartitions.add(topicPartition);
-	}
-		consumer.seekToBeginning(topicPartitions);
 		
 		ConsumerRecords<String, String> cRecords = consumer.poll(Duration.of(10, ChronoUnit.SECONDS));
 		List<String> studentList = new ArrayList<>();
@@ -101,7 +91,7 @@ public class StudentResource {
 			studentList.add(s1.getStdid());
 			System.out.println(s1);
 		}
-		//consumer.close();
+		consumer.close();
 		System.out.println("I am inside GET");
 		// return idList;
 		return studentList;
